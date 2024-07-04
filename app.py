@@ -16,7 +16,7 @@ from keras.models import load_model
 import joblib
 
 # Load the data
-data = pd.read_csv("C://Users//mvish//Desktop//AAPL.csv")
+data = pd.read_csv("AAPL.csv")
 data['Date'] = pd.to_datetime(data['Date'])
 data.set_index('Date', inplace=True)
 data.sort_index(inplace=True)
