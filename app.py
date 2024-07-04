@@ -219,7 +219,7 @@ if option == "ARIMA Model":
     future_forecast = scaler.inverse_transform(future_forecast.reshape(-1, 1))
 
     # Plot the forecasted next 30 days
-    future_dates = pd.date_range(start=data.index[-1], periods=31, closed='right')
+    future_dates = pd.date_range(start=data.index[-1], periods=31, inclusive='right')
 
     plt.figure(figsize=(14, 7))
     plt.plot(data.index, data['Close'], color='blue', label='Historical')
